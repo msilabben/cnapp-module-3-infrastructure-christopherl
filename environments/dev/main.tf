@@ -4,6 +4,10 @@ terraform {
       source  = "hashicorp/azurerm"
       version = "4.49.0"
     }
+    helm = {
+      source  = "hashicorp/helm"
+      version = "3.2.0"
+    }
   }
 }
 
@@ -37,6 +41,7 @@ module "federated_id_for_deployment" {
 
   role_definition_name = var.role_definition_name
   name_prefix          = var.name_prefix
+  tags                 = var.tags
 }
 
 module "key_vault" {

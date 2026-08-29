@@ -4,13 +4,19 @@ location = "norwayeast"
 // name_prefix = "<your username>"
 name_prefix = "christopherl"
 
+tags = {
+  managed_by = "terraform"
+  project    = "cnapp-module-3-infrastructure-christopherl"
+  owner      = "christopherl"
+}
+
 // Key vault
 key_vault_administrator_principal_ids = [
-  "4c37a483-a4d6-4fd9-8b63-7561fdf6db27",
   "6c424078-2ac1-443d-82e6-2a702859b40d"
 ]
 
-key_vault_secrets_user_principal_ids = []
+key_vault_secrets_user_principal_ids = [
+]
 aks_node_count = 2
 aks_vm_size    = "Standard_D2s_v3"
 

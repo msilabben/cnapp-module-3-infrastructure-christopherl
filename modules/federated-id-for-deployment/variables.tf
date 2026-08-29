@@ -43,3 +43,9 @@ variable "name_prefix" {
   type        = string
   default     = "id-github-terraform"
 }
+
+variable "tags" {
+  description = "Tags to apply."
+  type        = map(string)
+  default     = {}
+}

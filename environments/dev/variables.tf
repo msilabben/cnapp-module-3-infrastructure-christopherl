@@ -14,6 +14,8 @@ variable "tags" {
   type        = map(string)
   default = {
     managed_by = "terraform"
+    project    = "cnapp-module-3-infrastructure-christopherl"
+    owner      = "christopherl"
   }
 }
 

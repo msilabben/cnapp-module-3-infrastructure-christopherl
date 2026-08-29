@@ -136,7 +136,7 @@ resource "azurerm_federated_identity_credential" "dev_plan_pull_request" {
 
   audience = ["api://AzureADTokenExchange"]
   issuer   = "https://token.actions.githubusercontent.com"
-  subject  = "repo:${var.github_organization}/${var.github_repository}:pull_request"
+  subject  = "repo:${var.github_organization}@158168931/${var.github_repository}@1350597621:pull_request"
 }
 
 # Environment plans: useful for manual/main-branch plans if you want an environment-scoped read-only identity.
@@ -149,7 +149,7 @@ resource "azurerm_federated_identity_credential" "plan_environment" {
 
   audience = ["api://AzureADTokenExchange"]
   issuer   = "https://token.actions.githubusercontent.com"
-  subject  = "repo:${var.github_organization}/${var.github_repository}:environment:${each.key}"
+  subject  = "repo:${var.github_organization}@158168931/${var.github_repository}@1350597621:environment:${each.key}"
 }
 
 # Applies: environment-scoped FICs mapped to the write-capable identities.
@@ -162,7 +162,7 @@ resource "azurerm_federated_identity_credential" "apply_environment" {
 
   audience = ["api://AzureADTokenExchange"]
   issuer   = "https://token.actions.githubusercontent.com"
-  subject  = "repo:${var.github_organization}/${var.github_repository}:environment:${each.key}"
+  subject  = "repo:${var.github_organization}@158168931/${var.github_repository}@1350597621:environment:${each.key}"
 }
 
 resource "azurerm_role_assignment" "plan_subscription_reader" {
