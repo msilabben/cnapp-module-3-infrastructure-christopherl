@@ -36,6 +36,12 @@ variable "key_vault_secrets_user_principal_ids" {
   default     = []
 }
 
+variable "key_vault_secrets_officer_principal_ids" {
+  description = "Principal IDs that should add secrets to the Key Vault."
+  type        = list(string)
+  default     = []
+}
+
 variable "aks_kubernetes_version" {
   description = "AKS Kubernetes version. Null lets Azure choose the default."
   type        = string

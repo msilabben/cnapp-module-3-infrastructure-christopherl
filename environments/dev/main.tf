@@ -52,8 +52,9 @@ module "key_vault" {
   resource_group_name = data.azurerm_resource_group.environment.name
   tenant_id           = var.tenant_id
 
-  administrator_principal_ids = var.key_vault_administrator_principal_ids
-  secrets_user_principal_ids  = var.key_vault_secrets_user_principal_ids
+  administrator_principal_ids   = var.key_vault_administrator_principal_ids
+  secrets_user_principal_ids    = var.key_vault_secrets_user_principal_ids
+  secrets_officer_principal_ids = var.key_vault_secrets_officer_principal_ids
 
   purge_protection_enabled = false
 

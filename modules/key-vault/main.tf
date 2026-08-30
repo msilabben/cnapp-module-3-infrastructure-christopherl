@@ -42,3 +42,13 @@ resource "azurerm_role_assignment" "secrets_users" {
   principal_id         = each.value
   principal_type       = "ServicePrincipal"
 }
+
+
+resource "azurerm_role_assignment" "secrets_officers" {
+  for_each = toset(var.secrets_officer_principal_ids)
+
+  scope                = azurerm_key_vault.this.id
+  role_definition_name = "Key Vault Secrets Officer"
+  principal_id         = each.value
+  principal_type       = "User"
+}

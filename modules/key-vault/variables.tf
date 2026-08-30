@@ -92,6 +92,12 @@ variable "secrets_user_principal_ids" {
   default     = []
 }
 
+variable "secrets_officer_principal_ids" {
+  description = "Principal IDs that should receive Key Vault Secrets Officer."
+  type        = list(string)
+  default     = []
+}
+
 variable "tags" {
   description = "Tags to apply."
   type        = map(string)

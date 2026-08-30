@@ -17,6 +17,10 @@ key_vault_administrator_principal_ids = [
 
 key_vault_secrets_user_principal_ids = [
 ]
+
+key_vault_secrets_officer_principal_ids = [
+  "4c37a483-a4d6-4fd9-8b63-7561fdf6db27"
+]
 aks_node_count = 2
 aks_vm_size    = "Standard_D2s_v3"
 
